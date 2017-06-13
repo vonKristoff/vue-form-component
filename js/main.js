@@ -1,5 +1,10 @@
-console.log('heelo world')
+import Vue from 'vue/dist/vue'
+import template from './templates/root.html'
+import genericForm from './components/generic-form'
 
-if (ENV !== 'production') {
-    console.log('Logging is enabled!');
-}
+window.Bus = new Vue()
+const App = new Vue({
+    el: "#app",
+    template,
+    components: { genericForm }
+})

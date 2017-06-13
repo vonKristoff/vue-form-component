@@ -32,13 +32,13 @@
     "browser-sync": "^2.18.12"
   },
   "scripts": {
-    "firstrun": "./node_modules/.bin/eslint --init",
+    "firstrun": "",
     "start": "NODE_ENV=development npm-run-all --parallel server:watch listen:*",
     "package": "NODE_ENV=production rollup --config rollup.config.package.js",
     "production": "NODE_ENV=production rollup -c",
     "server:watch": "browser-sync start -s 'public' --port 3000 --cors -f 'public'",
     "listen:js": "onchange 'js/**/*.js' -- npm run compile:bundle",
-    "listen:views": "onchange 'jade/views/**/*.jade' -- npm run compile:pages",
+    "listen:views": "onchange 'jade/**/*.jade' -- npm run compile:pages",
     "listen:templates": "onchange jade/components/**/*.jade -- npm run compile:templates",
     "listen:stylus": "onchange 'stylus/**/*.styl' -- npm run compile:css",
     "precompile:js": "jshint --reporter=node_modules/jshint-stylish/stylish js/.; exit 0",

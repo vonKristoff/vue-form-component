@@ -1,21 +1,13 @@
-#vue-forms-and-inputs
+# vue-forms-and-inputs
 
-### Package Module into CJS Format
-This can now be included in another `rollup` built bundle.  
-Work on `es6/package.js`, and create with..
-    
-    npm run package
+Working prototype for handling forms in Vue.
 
-### Testing bundle
-Work in `js/main` as usual
+The idea is that you should be able to deploy this repo as a form component that handles its own errors, and can communicate between Vue apps of other JS app code via its Global Event Bus.
 
-    npm start
+Rather than the use of inline `v-model` on input elements, each input is a configurable component that makes its behaviour easier to define and manipulate.
 
----
-
-### notes
-* Uses `rollup` where most `commonjs` modules from `npm` will work, there may still need to be some tweaking.
-* `ENV variables` are available, see `npm run production` and in `js/main.js`. Also `rollup.config.js` detects `ENV` and `uglifies` where applicable.
-* [eslint](http://eslint.org/docs/user-guide/configuring) check the manual for any issues with ES6
-
----
+### Features
+* Form and Error Classes
+* Custom Inputs 
+* Global Event Bus
+* Plug-n-play
