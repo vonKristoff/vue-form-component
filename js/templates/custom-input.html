@@ -1,0 +1,1 @@
+<fieldset><label :for="id">enter some text</label><input :id="id" :name="id" type="text" :value="value" @input="update($event.target.value)" @blur="hasError" ref="field"/><label :for="id" class="is-error">some error</label></fieldset>
