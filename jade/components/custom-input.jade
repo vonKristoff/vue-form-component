@@ -1,0 +1,4 @@
+fieldset
+  label(":for"="id") enter some text
+  input(":id"="id" ":name"="id" type="text" ":value"="value" @input="update($event.target.value)" @blur="hasError" ref="field")  
+  label.is-error(":for"="id") some error
